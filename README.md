@@ -17,5 +17,5 @@ A simple and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript.
 2. Open `index.html` in your browser
 
 ## 📌 Author
-Nitya Vaish
+Nitika Vaish
 
