@@ -52,6 +52,10 @@ body {
   color: #2c0703;
   font-size: 5vmin;
 }
+#tie_msg {
+  color: #2c0703;
+  font-size: 5vmin;
+}
 .msg-container {
   height: 100vmin;
   display: flex;
@@ -64,3 +68,4 @@ body {
 .hide {
   display: none;
 }
+
