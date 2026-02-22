@@ -16,10 +16,11 @@ const winPatterns = [
 ];
 const resetGame = () => {
   turnO = true;
+  cnt=0;
   enableBoxes();
   msgContainer.classList.add("hide");
 };
-
+let cnt=0;
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     // console.log("box was clicked");
@@ -33,6 +34,7 @@ boxes.forEach((box) => {
       turnO = true;
     }
     box.disabled = true;
+    cnt++;
     checkWinner();
   });
 });
@@ -46,7 +48,11 @@ const checkWinner = () => {
       if (pos1val === pos2val && pos2val === pos3val) {
         // console.log("Winner ", pos1val);
         showWinner(pos1val);
+        return ;
       }
+    }
+     if (cnt === 9) {
+      showTie();
     }
   }
 };
@@ -67,5 +73,11 @@ const enableBoxes = () => {
     box.innerText = "";
   }
 };
+const showTie = () => {
+  msg.innerText = `It's a Tie!`;
+  msgContainer.classList.remove("hide");
+  disableBoxes();
+};
 newGameBtn.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
+
